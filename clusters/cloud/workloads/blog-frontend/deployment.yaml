@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: blog-frontend
-          image: gendos123/personal-blog@sha256:e30562c1a69cab4b8b7d68dc50ce23ef977428cc0921fb9bc0776ef1c6541b65
+          image: gendos123/blog-frontend:latest
           ports:
             - containerPort: 80
       imagePullSecrets:
