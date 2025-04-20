@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blog-frontend
+  template:
+    metadata:
+      labels:
+        app: blog-frontend
+    spec:
+      containers:
+        - name: blog-frontend
+          image: gendos123/blog-frontend:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: dockerhub-cred
